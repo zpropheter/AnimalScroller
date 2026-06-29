@@ -7,6 +7,9 @@ import Combine
 
 struct ContentView: View {
     @StateObject private var viewModel = AnimalFeedViewModel()
+    // scenePhase tells us whether the app is active, in the background, or inactive.
+    // We use it to restore the idle timer when the user leaves the app.
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         ZStack {
@@ -17,6 +20,15 @@ struct ContentView: View {
             } else {
                 PhotoDisplayView(viewModel: viewModel)
             }
+        }
+        .onAppear {
+            // Disable the idle timer so the screen stays on while the app is open
+            UIApplication.shared.isIdleTimerDisabled = true
+        }
+        .onChange(of: scenePhase) { newPhase in
+            // Re-enable the idle timer when the app goes to background or becomes inactive,
+            // so the screen can sleep normally when the user isn't using this app
+            UIApplication.shared.isIdleTimerDisabled = (newPhase == .active)
         }
     }
 }
