@@ -1,0 +1,101 @@
+# AnimalScroller Privacy Policy
+
+**Last updated: July 6, 2026**
+
+---
+
+## Overview
+
+AnimalScroller is an animal photo browsing app for iPhone and iPad. This policy explains what information the app uses, how it is handled, and what is never collected.
+
+The short version: AnimalScroller does not collect, store, or share any personal information about you. Ever.
+
+---
+
+## Information the app uses
+
+### Preferences stored on your device
+
+AnimalScroller saves two settings locally on your device using Apple's standard UserDefaults system:
+
+- **Photo interval** — how many seconds between photos
+- **Enabled categories** — which animal categories you have selected
+
+These preferences never leave your device. They are not transmitted to any server, including ours.
+
+### Cached photos
+
+When you browse photos, AnimalScroller stores downloaded images in your device's local cache (up to 1 GB). This allows previously viewed photos to load without an internet connection. The cache is managed entirely by iOS and can be cleared at any time in **Settings → General → iPhone/iPad Storage → AnimalScroller → Offload App**.
+
+---
+
+## Third-party services
+
+AnimalScroller fetches animal photos and article data from **Wikipedia** (operated by the Wikimedia Foundation). Each request includes a standard HTTP User-Agent header identifying the app:
+
+```
+AnimalScroller/1.0 (iOS; animal photo viewer; zpropheter@hotmail.com)
+```
+
+This header is required by Wikimedia's API policy so they can contact the developer if the app causes problems. It identifies the app and developer — not you.
+
+Wikipedia's own privacy policy governs how Wikimedia handles these requests:
+[https://foundation.wikimedia.org/wiki/Privacy_policy](https://foundation.wikimedia.org/wiki/Privacy_policy)
+
+AnimalScroller has no other third-party integrations. There are no analytics SDKs, no advertising networks, no crash reporters, and no social logins.
+
+---
+
+## What we do not collect
+
+- No name, email address, or account information
+- No device identifiers (IDFA, IDFV, or similar)
+- No location data
+- No usage analytics or behavioral tracking
+- No camera or microphone access
+- No contacts or photos from your photo library
+- No health or financial data
+
+---
+
+## Network access
+
+AnimalScroller requests network access solely to:
+
+1. Fetch animal photo URLs from the Wikipedia REST API
+2. Download the corresponding images
+
+No data about you or your usage is included in these requests.
+
+The app uses Apple's Network framework (`NWPathMonitor`) to detect whether a connection is available before attempting background image enrichment. This check is performed entirely on-device and does not transmit any data.
+
+---
+
+## Children's privacy
+
+AnimalScroller does not knowingly collect information from anyone, including children under 13. No account creation or personal information is required to use the app.
+
+---
+
+## Data retention
+
+Because AnimalScroller collects no personal data, there is nothing to retain or delete. Your locally stored preferences and cached images can be removed at any time by deleting the app.
+
+---
+
+## Changes to this policy
+
+If this policy changes, the updated version will be posted with a new "Last updated" date. Continued use of the app after changes constitutes acceptance of the revised policy.
+
+---
+
+## Contact
+
+If you have questions about this privacy policy, contact:
+
+**Zach Propheter**
+zpropheter@hotmail.com
+
+---
+
+*AnimalScroller is an independent app and is not affiliated with or endorsed by the Wikimedia Foundation.*
